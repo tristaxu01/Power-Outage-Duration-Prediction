@@ -1,42 +1,16 @@
 ---
 layout: post
-title: Introduction
+title: Background
 ---
 
-*The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
+*Between January 2000 to July 2016, there were total of 1534 number power outrage that impacted at least 50,000 customers or caused an unplanned firm load loss of atleast 300 MW occured in United State. The largest power outage affected approximately 3.5 million people, and a maximum of 41,788 MW Peak Demand Power was lost during a single outage event. The focus of our website is to investigate the relationship between monthly electricity prices in the residential sector (labeled as "RES.PRICE" in the dataset) and power outages caused by intentional attacks. Specifically, we aim to determine whether regions with a top 25% residential electricity price are more likely to experience power outages caused by intentional attacks.
 
 -----
 
-Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@mdo](https://twitter.com/mdo) to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example layouts, pages, posts, and styles.
+# Framing the Problem 
 
-This demo site was last updated {{ site.time | date: "%B %d, %Y" }}.
+*Power outages are a common occurrence in the power network, and various factors can contribute to these events. As previously mentioned, power outages can result in significant financial losses and negatively impact people's lives. Predicting power outages can help local organizations and individuals take preventative actions to minimize losses before an unexpected event occurs. Our website explores data on major power outage events in the US continental and investigates the relationship between outage duration and factors such as US state, state population, outage occurrence time, climate region, and more using regression analysis. (The data cleaning process has been thoroughly documented on a [separate website](https://github.com/tristaxu01/Intentional-Power-Outage) that explores electricity prices and power outage causes.)
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub]({{ site.github.repo }}).
-
-## What's included
-
-Poole is a streamlined Jekyll site designed and built as a foundation for building more meaningful themes. Poole, and every theme built on it like this one, includes the following:
-
-* Complete Jekyll setup included (layouts, config, [404]({{ '404.html' | relative_url }}), [RSS feed]({{ 'atom.xml' | relative_url }}), posts, [archive page]({{ 'archive' | relative_url }}), and [example page]({{ 'about' | relative_url }}))
-* Mobile friendly design and development
-* Easily scalable text and component sizing with `rem` units in the CSS
-* Support for a wide gamut of HTML elements
-* Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Jekyll's built-in support for Rouge
-
-Additional features are available in individual themes.
-
-## Browser support
-
-Poole and its themes are by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), Firefox, and Edge.
-
-## Download
-
-These themes are developed on and hosted with GitHub. Head to the [GitHub repository]({{ site.github.repo }}) for downloads, bug reports, and features requests.
+*Our team aims to predict the quantitative data of the power outage duration in minutes based on external factors such as climate, geography, and local electricity information. To measure the ability of our model to predict quantitative data, we will use mean squared error. By doing so, we hope to provide accurate and useful information to help individuals and organizations prepare and prevent significant losses resulting from power outages.
 
 Thanks!
