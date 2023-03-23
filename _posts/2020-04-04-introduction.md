@@ -33,3 +33,6 @@ For the baseline model, we selected Random Forest Regressor because it can handl
 
 ### Performance Analysis
 Based on the high RMSE value of around 5000, it seems that the current model is not accurate enough for practical use. One reason for this could be that the feature selection process was based solely on intuition, and the selected features may not be sufficiently informative to predict the duration of power outages. Additionally, the model's overall simplicity may not capture the complex relationships and interactions between the features and the outage duration. Therefore, it may be necessary to consider more advanced modeling techniques and more informative features to improve the model's accuracy.
+
+# Final Model
+|         |\n|--------:|\n| 1217.41 |\n| 1222.85 |\n| 1220.44 |\n| 1223.68 |\n| 1189.21 |
