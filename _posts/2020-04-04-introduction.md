@@ -36,3 +36,25 @@ Based on the high RMSE value of around 5000, it seems that the current model is 
 
 # Final Model
 |                                                                                               |         |\n|:----------------------------------------------------------------------------------------------|--------:|\n| Climate_re                                                                                    | 1217.41 |\n| Climate_re, Month                                                                             | 1222.85 |\n| Climate_re, Month, Population, Start_hour                                                     | 1220.44 |\n| Climate_re, Month, Population, Start_hour, Climate_cat                                        | 1223.68 |\n| Climate_re, Month, Population, Start_Hour, CAUSE.CATEGORY, U.S._STATE, YEAR, Sqrt_Ind_Cut_Pct | 1189.21 |
+
+
+# Fairness Test
+In this section, our team designed a fairness test to evaluate the performance of our model. We aimed to test if the model's predictions were biased towards areas with a greater urban area percentage than the national average. The test included two groups: X and Y. The X group consisted of outage events in states with a lower urban area percentage than the national average, while the Y group consisted of outage events in states with a higher urban area percentage than the national average.
+
+We used the permutation test to investigate whether the model predictions had the same performance on the two different populations. In other words, we tested if the predicted outage events in areas with more urban area percentage and those in areas with less urban area percentage were from the same predicted population, and the difference between them was due to random chance.
+
+#### Null Hypothesis: 
+The performance of our model is not significantly different in predicting outage events in areas with more urban area percentage than the national average compared to areas with less urban area percentage than the national average.
+
+#### Alternative Hypothesis: 
+The performance of our model is significantly different in predicting outage events in areas with more urban area percentage than the national average compared to areas with less urban area percentage than the national average.
+
+#### Test stistic: 
+Absolute difference in root mean square between two groups
+
+#### Significant level: 0.05
+
+#### P value and Conclusion
+The p-value of our test is 0.63, which is much higher than the significance level of 0.05. Therefore, we fail to reject the null hypothesis that our model yields a significant difference in higher urban percentage states and lower urban percentage states. Our model is likely to be fair in predicting outage events in different urban land percentage states.
+
+
