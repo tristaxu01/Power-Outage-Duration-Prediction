@@ -35,6 +35,16 @@ For the baseline model, we selected Random Forest Regressor because it can handl
 Based on the high RMSE value of around 5000, it seems that the current model is not accurate enough for practical use. One reason for this could be that the feature selection process was based solely on intuition, and the selected features may not be sufficiently informative to predict the duration of power outages. Additionally, the model's overall simplicity may not capture the complex relationships and interactions between the features and the outage duration. Therefore, it may be necessary to consider more advanced modeling techniques and more informative features to improve the model's accuracy.
 
 # Final Model
+### Feature Description
+During the final model construction, we notice that there are outliers that falls far outside the normal range of y(outrage duration) column and this has hugely affect the slope of the fitting line. Our team concluded that those outliers has hugely affect our predeiction. Therefore, we decide to drop the upper 15% percentile of the data. This lowered our root mean square error from aroung 5000 to 1000. 
+
+Then we perfrom the cross validation, to select best pipeline foe our final model. Accoding to the table We choose to add "U.S._STATE", "CAUSE.CATEGORY", "YEAR", "IND.CUST.PCT(%)", "COM.PRICE(cents / kilowatt-hour)","RES.CUST.PCT(%)". 
+
+### Feature Selection
+Upon further consideration, our team performed a groupby analysis on the duration data using several categorical features to observe differences in duration time across different groups. 
+* We added a new column called "CAUSE.CATEGORY" using one-hot encoding, as different categories of outage causes can have varying durations (for example, system operability disruption versus public appeal) and the latter category typically takes longer to restore. 
+
+* 
 |                                                                                               |         |\n|:----------------------------------------------------------------------------------------------|--------:|\n| Climate_re                                                                                    | 1217.41 |\n| Climate_re, Month                                                                             | 1222.85 |\n| Climate_re, Month, Population, Start_hour                                                     | 1220.44 |\n| Climate_re, Month, Population, Start_hour, Climate_cat                                        | 1223.68 |\n| Climate_re, Month, Population, Start_Hour, CAUSE.CATEGORY, U.S._STATE, YEAR, Sqrt_Ind_Cut_Pct | 1189.21 |
 
 
