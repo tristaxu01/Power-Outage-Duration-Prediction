@@ -90,17 +90,12 @@ Upon further consideration, our team performed a groupby analysis on the duratio
 *  Lastly, we choose to include the column IND.CUST.PCT(%), which the graph seems to be non-linear. According to the Tukley and Mosteller’s bulging rule, we use square root to our values on IND.CUST.PCT(%). The reson we include this feature is that the industrial places are likely to be a greater demand for electricity. If the power grid is not equipped to handle the demand, it can lead to strain on the system and potentially result in longer power outages.
 
 ### Choice of Regressor
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-For the final model, we selected linear regression. Even though we initially explored using random forest regression with higher max_depth, the RMSE values of the transformed linear regression were similar to those of the random forest regression. As a result, we opted for the simpler linear regression model.
+For the baseline model, we selected Random Forest Regressor because it can handle a large number of features, has lower overfitting risk compared to other models, and can model nonlinear relationships between features, which is useful for predicting outage duration. The algorithm also considers interactions between categorical and quantitative features, making it suitable for the diverse and complex data in this prediction problem. Overall, the Random Forest Regressor is a good choice for outage duration prediction due to its flexibility and ability to handle complex data.
 
 ### Performance Analysis
 
-Using data visualization and consideration of the data generating process, we were able to improve the performance of the model by adding more features and dropping extreme outliers. As a result, the performance of the final model increased from a baseline RMSE of 5000 to 1000.
-
-However, while the selected features have improved the performance of the model, they are not sufficient for predicting the duration of power outages in all cases. The model is still not ready for practical use as further consideration needs to be done on extreme conditions, such as the extreme outlier duration time dropped during model training. More advanced modeling techniques and additional informative features need to be considered if we want to use the model to minimize the duration of power outages in real life situations.
+Based on the high RMSE value of around 5000, it seems that the current model is not accurate enough for practical use. One reason for this could be that the feature selection process was based solely on intuition, and the selected features may not be sufficiently informative to predict the duration of power outages. Additionally, the model's overall simplicity may not capture the complex relationships and interactions between the features and the outage duration. Therefore, it may be necessary to consider more advanced modeling techniques and more informative features to improve the model's accuracy.
 
 
 # Fairness Test
