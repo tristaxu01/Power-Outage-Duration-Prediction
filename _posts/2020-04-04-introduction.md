@@ -90,7 +90,10 @@ Upon further consideration, our team performed a groupby analysis on the duratio
 *  Lastly, we choose to include the column IND.CUST.PCT(%), which the graph seems to be non-linear. According to the Tukley and Mosteller’s bulging rule, we use square root to our values on IND.CUST.PCT(%). The reson we include this feature is that the industrial places are likely to be a greater demand for electricity. If the power grid is not equipped to handle the demand, it can lead to strain on the system and potentially result in longer power outages.
 
 ### Choice of Regressor
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 For the final model, we selected linear regression. Even though we initially explored using random forest regression with higher max_depth, the RMSE values of the transformed linear regression were similar to those of the random forest regression. As a result, we opted for the simpler linear regression model.
 
 ### Performance Analysis
